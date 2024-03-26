@@ -2,7 +2,7 @@
 
 /**
 *binary_tree_height - measures the height of a node in a binary tree
-*@tree:  a pointer to the root node measure height
+*@tree:  a pointer to the root node of tree to measure height
 *Return: int height
 *Description: if tree null return 0
 */
