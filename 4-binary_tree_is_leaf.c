@@ -1,7 +1,7 @@
 #include"binary_trees.h"
 #include<stdlib.h>
 /**
-*binary_tree_is_leaf - deletes entire tree
+*binary_tree_is_leaf -  checks if a given node is a leaf
 *@node:  a pointer to the node to check
 *Return: 1 if node leaf otherwise 0
 *Description: if node null return 0
