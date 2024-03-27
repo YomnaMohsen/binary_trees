@@ -13,7 +13,7 @@ int check_is_full(const binary_tree_t *tree)
 		   check_is_full(tree->left) == 0 ||
 		   check_is_full(tree->right) == 0)
 			return (0);
-    }
+	}
 	return (1);
 }
 /**
