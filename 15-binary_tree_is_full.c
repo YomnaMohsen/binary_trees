@@ -18,7 +18,7 @@ int check_is_full(const binary_tree_t *tree)
 }
 /**
 *binary_tree_is_full - checks if a binary tree is full
-*@tree:  a pointer to the root node of tree to measure balance factor
+*@tree:  a pointer to the root node of tree to check
 *Return: 1 if balanced or 0
 *Description: if tree null return 0
 */
