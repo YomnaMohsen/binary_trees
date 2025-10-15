@@ -47,8 +47,9 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 void binary_tree_print(const binary_tree_t *tree);
 int check_is_full(const binary_tree_t *tree);
 int binary_tree_is_heap(const binary_tree_t *tree);
-int binary_tree_is_complete(binary_tree_t *tree);
-int is_complete_tree(binary_tree_t *tree, size_t index,size_t tree_size);
+int binary_tree_is_complete(const binary_tree_t *tree);
+int is_complete_tree(const binary_tree_t *tree, size_t index,size_t tree_size);
+int is_max_binary_heap(const binary_tree_t* tree);
 
 
 #endif
