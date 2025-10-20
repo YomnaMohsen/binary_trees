@@ -63,8 +63,8 @@ size_t binary_tree_size(const binary_tree_t *tree)
 
 /**
 *heap_node_finder - finds current parent
-*@root:  a pointer to the root node of tree to measure size
-*@number: initial parent index
+*@root:  a pointer to the root node 
+*@number: current parent index
 *Return: pointer to current parent
 */
 heap_t *heap_node_finder(heap_t *root, size_t number)
@@ -85,7 +85,7 @@ heap_t *heap_node_finder(heap_t *root, size_t number)
 /**
 *heap_swap- swap 2 values in 2 nodes
 *@new:  a pointer to the newely created node
-*@parent: pointer to parent of new node
+*@parent: pointer to new parent
 *Return: pointer to node that has new value, (parent)
 */
 heap_t *heap_swap(heap_t *new, heap_t *parent)
