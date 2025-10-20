@@ -1,7 +1,7 @@
 #include"binary_trees.h"
 #include <stdio.h>
 heap_t *heap_node_finder(heap_t *root, size_t number);
-heap_t * heap_swap(heap_t *new, heap_t *parent);
+heap_t *heap_swap(heap_t *new, heap_t *parent);
 
 /*
 *binary_tree_is_heap - inserts a value in Max Binary Heap
@@ -14,7 +14,7 @@ heap_t * heap_swap(heap_t *new, heap_t *parent);
 
     size_t size;
 	int swap = 1;
-	heap_t* parent, *new;
+	heap_t *parent, *new;
     if(*root == NULL)
     {
        *root = binary_tree_node(NULL, value);
@@ -47,7 +47,7 @@ heap_t * heap_swap(heap_t *new, heap_t *parent);
 
  }
 
- /**
+/**
 *binary_tree_size - measures the size of a binary tree
 *@tree:  a pointer to the root node of tree to measure size
 *Return: int size
@@ -61,6 +61,12 @@ size_t binary_tree_size(const binary_tree_t *tree)
 	return (1+ binary_tree_size(tree->left) + binary_tree_size(tree->right));
 }
 
+/**
+*heap_node_finder - finds current parent
+*@root:  a pointer to the root node of tree to measure size
+*@number: initial parent index
+*Return: pointer to current parent
+*/
 heap_t *heap_node_finder(heap_t *root, size_t number)
 {
 	size_t parent_index, dir;
@@ -76,7 +82,13 @@ heap_t *heap_node_finder(heap_t *root, size_t number)
 	return(heap_node_finder(root, parent_index)->right);
 }
 
-heap_t * heap_swap(heap_t *new, heap_t *parent)
+/**
+*heap_swap- swap 2 values in 2 nodes
+*@new:  a pointer to the newely created node
+*@parent: pointer to parent of new node
+*Return: pointer to node that has new value, (parent)
+*/
+heap_t *heap_swap(heap_t *new, heap_t *parent)
 {
 	int tmp;
 	tmp = parent->n;
