@@ -15,11 +15,11 @@ int heap_extract(heap_t **root)
         return(0);
     }
     value = *root->n;
-    (!*root->left && !*root->right)
+    if(!*root->left && !*root->right)
     {
         free(*root);
         return(value);
     }
-
+    return (0);
 
  }
