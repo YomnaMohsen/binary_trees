@@ -34,7 +34,7 @@ int *heap_to_sorted_array(heap_t *heap, size_t *size)
     {
         return (NULL);
     }
-    *size = binary_tree_size_h(heap);
+    *size = binary_tree_size_h(heap) + 1;
 
     arr = malloc(sizeof(int) *(*size));
     if(!arr)
