@@ -9,16 +9,19 @@
 */
 size_t binary_tree_size_h(const binary_tree_t *tree)
 {
-	size_t size = 0;
+	size_t size_l = 0;
+    size_t size_r = 0;
 
-	if (tree)
-	{
-		size++;
-		size += binary_tree_size(tree->right);
-		size += binary_tree_size(tree->left);
-		return (size);
+	if (!tree)
+        return (0);
+	
+        if(tree->right)
+            size_r = 1 + binary_tree_size(tree->right);
+        if(tree->left)
+            size_l=1 + binary_tree_size(tree->left);
+		return (size_r+ size_l);
 	}
-	return (0);
+	
 }
 /** 
 *heap__to_sorted_array - converts a Binary Max Heap to a sorted array of integers
@@ -29,7 +32,7 @@ size_t binary_tree_size_h(const binary_tree_t *tree)
 int *heap_to_sorted_array(heap_t *heap, size_t *size)
 {
     int *arr, i;
-    arr = NULL;
+ 
     if(!heap || !size)
     {
         return (NULL);
