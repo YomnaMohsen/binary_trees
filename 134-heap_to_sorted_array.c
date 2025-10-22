@@ -8,7 +8,7 @@
 *Return: int size
 *Description: if tree null return 0
 */
-size_t binary_tree_size(const binary_tree_t *tree)
+size_t binary_tree_size_h(const binary_tree_t *tree)
 {
 	size_t size = 0;
 
@@ -30,12 +30,13 @@ size_t binary_tree_size(const binary_tree_t *tree)
 */
 int *heap_to_sorted_array(heap_t *heap, size_t *size)
 {
-    int *arr, i;
+    int *arr;
+    size_t i;
     if(!heap || !size)
     {
         return NULL;
     }
-    *size = binary_tree_size(heap);
+    *size = binary_tree_size_h(heap);
 
     arr = malloc(sizeof(int) *(*size));
 
