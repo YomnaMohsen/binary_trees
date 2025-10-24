@@ -100,9 +100,7 @@ void heapify_down(heap_t *root)
             largest = root->right;
 
         if(root->left && root->left->n > largest->n)
-            largest = root->left;
-
-        
+            largest = root->left; 
 
         if(largest == root)
             break;
