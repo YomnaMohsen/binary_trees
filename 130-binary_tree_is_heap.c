@@ -35,7 +35,7 @@ int binary_tree_is_complete(const binary_tree_t *tree)
     }
     tree_size = binary_tree_size(tree);
     index = 0;
-    return(is_complete_tree(tree, index, tree_size) && is_max_binary_heap(tree));
+    return(is_complete_tree(tree, index, tree_size));
 }
 
 /**
